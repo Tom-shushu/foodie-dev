@@ -1,0 +1,13 @@
+com\zhouhong\mapper\ItemsMapper.class
+com\zhouhong\mapper\OrderItemsMapper.class
+com\zhouhong\mapper\ItemsCommentsMapper.class
+com\zhouhong\mapper\CarouselMapper.class
+com\zhouhong\mapper\OrderStatusMapper.class
+com\zhouhong\mapper\ItemsSpecMapper.class
+com\zhouhong\mapper\UserAddressMapper.class
+com\zhouhong\mapper\ItemsImgMapper.class
+com\zhouhong\mapper\OrdersMapper.class
+com\zhouhong\mapper\CategoryMapper.class
+com\zhouhong\my\mapper\MyMapper.class
+com\zhouhong\mapper\UsersMapper.class
+com\zhouhong\mapper\ItemsParamMapper.class

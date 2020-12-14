@@ -1,0 +1,13 @@
+com\zhouhong\pojo\OrderItems.class
+com\zhouhong\pojo\Carousel.class
+com\zhouhong\pojo\Users.class
+com\zhouhong\pojo\Category.class
+com\zhouhong\pojo\Orders.class
+com\zhouhong\pojo\bo\UserBO.class
+com\zhouhong\pojo\ItemsImg.class
+com\zhouhong\pojo\ItemsParam.class
+com\zhouhong\pojo\Items.class
+com\zhouhong\pojo\UserAddress.class
+com\zhouhong\pojo\ItemsComments.class
+com\zhouhong\pojo\ItemsSpec.class
+com\zhouhong\pojo\OrderStatus.class
