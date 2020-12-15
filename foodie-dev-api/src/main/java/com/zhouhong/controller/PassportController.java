@@ -4,6 +4,9 @@ import com.zhouhong.pojo.Users;
 import com.zhouhong.pojo.bo.UserBO;
 import com.zhouhong.service.UserService;
 import com.zhouhong.utils.JSONResult;
+import com.zhouhong.utils.MD5Utils;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,6 +22,7 @@ import java.util.List;
  * @Date: Created in 2020/12/7
  **/
 //@Controller
+@Api(value = "注册登录",tags = "用于注册登录的相关接口")
 @RestController
 @RequestMapping("passport")
 public class PassportController {
@@ -29,6 +33,7 @@ public class PassportController {
      * @param username
      * @return
      */
+    @ApiOperation(value = "用户名是否存在",notes = "用户名是否存在",httpMethod = "GET")
     @GetMapping("/usernameIsExist")
     public JSONResult usernameIsExist(@RequestParam String username) {
         //1.判断用户名不能为空
@@ -49,6 +54,7 @@ public class PassportController {
      * @param userBO
      * @return
      */
+    @ApiOperation(value = "用户注册",notes = "用户名注册",httpMethod = "POST")
     @PostMapping("/regist")
     public JSONResult regist(@RequestBody UserBO userBO) {
         String username = userBO.getUsername();
@@ -77,5 +83,30 @@ public class PassportController {
         userService.createUser(userBO);
         return JSONResult.ok();
     }
+
+    /**
+     * 用户登录
+     * @param userBO
+     * @return
+     */
+    @ApiOperation(value = "用户登录",notes = "用户登录",httpMethod = "POST")
+    @PostMapping("/login")
+    public JSONResult login(@RequestBody UserBO userBO) throws Exception{
+        String username = userBO.getUsername();
+        String password = userBO.getPassword();
+        //0.判断用户名和密码不为空
+        if (StringUtils.isBlank(username) ||
+                StringUtils.isBlank(password)){
+            return JSONResult.errorMsg("用户名或密码不能为空");
+        }
+        //1.实现登录
+        Users usersResult = userService.queryUserForLogin(username,
+                MD5Utils.getMD5Str(password));
+        if (usersResult == null){
+            return JSONResult.errorMsg("用户名或密码错误");
+        }
+        return JSONResult.ok(usersResult);
+    }
+
 
 }
