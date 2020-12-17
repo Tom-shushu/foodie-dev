@@ -1,5 +1,4 @@
 com\zhouhong\aspect\ServiceLogAspect.class
 com\zhouhong\Application.class
-com\zhouhong\controller\IndexController.class
 com\zhouhong\config\Swagger2.class
 com\zhouhong\controller\PassportController.class
