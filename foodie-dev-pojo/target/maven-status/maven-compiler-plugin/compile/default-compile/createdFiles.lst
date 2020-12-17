@@ -11,3 +11,5 @@ com\zhouhong\pojo\UserAddress.class
 com\zhouhong\pojo\ItemsComments.class
 com\zhouhong\pojo\ItemsSpec.class
 com\zhouhong\pojo\OrderStatus.class
+com\zhouhong\pojo\vo\SubCategoryVO.class
+com\zhouhong\pojo\vo\CategoryVO.class

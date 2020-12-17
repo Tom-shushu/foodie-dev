@@ -5,7 +5,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 /**
  * @ClassName: UserBO
- * @Description:
+ * @Description: 接受前端的数据
  * @Author: 周红
  * @NickName: Tom-shuhu
  * @Date: Created in 2020/12/15

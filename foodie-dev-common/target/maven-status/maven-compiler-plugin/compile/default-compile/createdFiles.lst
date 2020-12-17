@@ -4,8 +4,10 @@ org\n3r\idworker\utils\HttpReq.class
 com\zhouhong\utils\DateUtil.class
 org\n3r\idworker\Code.class
 org\n3r\idworker\strategy\FileLock.class
+com\zhouhong\utils\CookieUtils.class
 org\n3r\idworker\Test.class
 com\zhouhong\utils\JSONResult.class
+com\zhouhong\utils\JsonUtils.class
 org\n3r\idworker\Sid$1.class
 org\n3r\idworker\utils\Props.class
 org\n3r\idworker\strategy\DefaultRandomCodeStrategy$1.class
@@ -13,6 +15,7 @@ org\n3r\idworker\Sid.class
 org\n3r\idworker\RandomCodeStrategy.class
 org\n3r\idworker\utils\IPv4Utils.class
 org\n3r\idworker\utils\Props$Silent.class
+com\zhouhong\enums\YesOrNo.class
 org\n3r\idworker\WorkerIdStrategy.class
 org\n3r\idworker\utils\Utils.class
 org\n3r\idworker\DayCode.class

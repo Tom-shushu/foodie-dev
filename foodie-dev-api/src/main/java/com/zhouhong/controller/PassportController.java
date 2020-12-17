@@ -3,7 +3,9 @@ package com.zhouhong.controller;
 import com.zhouhong.pojo.Users;
 import com.zhouhong.pojo.bo.UserBO;
 import com.zhouhong.service.UserService;
+import com.zhouhong.utils.CookieUtils;
 import com.zhouhong.utils.JSONResult;
+import com.zhouhong.utils.JsonUtils;
 import com.zhouhong.utils.MD5Utils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -12,6 +14,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 /**
@@ -22,6 +26,7 @@ import java.util.List;
  * @Date: Created in 2020/12/7
  **/
 //@Controller
+
 @Api(value = "注册登录",tags = "用于注册登录的相关接口")
 @RestController
 @RequestMapping("passport")
@@ -56,7 +61,8 @@ public class PassportController {
      */
     @ApiOperation(value = "用户注册",notes = "用户名注册",httpMethod = "POST")
     @PostMapping("/regist")
-    public JSONResult regist(@RequestBody UserBO userBO) {
+    public JSONResult regist(@RequestBody UserBO userBO , HttpServletRequest request ,
+                             HttpServletResponse response) {
         String username = userBO.getUsername();
         String password = userBO.getPassword();
         String confirmPwd = userBO.getConfirmPassword();
@@ -80,7 +86,11 @@ public class PassportController {
             return JSONResult.errorMsg("两次密码输入不一致");
         }
         //4.实现注册
-        userService.createUser(userBO);
+        Users usersResult = userService.createUser(userBO);
+
+        usersResult = setNullProperty(usersResult);
+        CookieUtils.setCookie(request , response , "user" ,
+                JsonUtils.objectToJson(usersResult) , true);
         return JSONResult.ok();
     }
 
@@ -91,7 +101,8 @@ public class PassportController {
      */
     @ApiOperation(value = "用户登录",notes = "用户登录",httpMethod = "POST")
     @PostMapping("/login")
-    public JSONResult login(@RequestBody UserBO userBO) throws Exception{
+    public JSONResult login(@RequestBody UserBO userBO , HttpServletRequest request ,
+                            HttpServletResponse response) throws Exception{
         String username = userBO.getUsername();
         String password = userBO.getPassword();
         //0.判断用户名和密码不为空
@@ -105,8 +116,31 @@ public class PassportController {
         if (usersResult == null){
             return JSONResult.errorMsg("用户名或密码错误");
         }
+
+        usersResult = setNullProperty(usersResult);
+        CookieUtils.setCookie(request , response , "user" ,
+                JsonUtils.objectToJson(usersResult) , true);
         return JSONResult.ok(usersResult);
     }
+    private Users setNullProperty(Users usersResult){
+        usersResult.setPassword(null);
+        usersResult.setMobile(null);
+        usersResult.setEmail(null);
+        usersResult.setCreatedTime(null);
+        usersResult.setUpdatedTime(null);
+        usersResult.setBirthday(null);
+        return usersResult;
+    }
 
-
+    @ApiOperation(value = "用户退出登录",notes = "用户退出登录",httpMethod = "POST")
+    @PostMapping("/logout")
+    public JSONResult logout(@RequestParam String userId ,
+                             HttpServletRequest request ,
+                             HttpServletResponse response){
+        //清除用户相关的信息的cookie
+        CookieUtils.deleteCookie(request , response , "user");
+        //TODO  用户退出登录，需要清空购物车
+        //TODO  在分布式会话中需要清空用户数据
+        return JSONResult.ok();
+    }
 }
