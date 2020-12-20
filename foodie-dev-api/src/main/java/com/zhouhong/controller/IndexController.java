@@ -76,7 +76,6 @@ public class IndexController {
         if (rootCatId == null){
             return JSONResult.errorMsg("分类不存在");
         }
-
         List<NewItemsVO> list = categoryService.getSixNewItemLazy(rootCatId);
         return JSONResult.ok(list);
     }

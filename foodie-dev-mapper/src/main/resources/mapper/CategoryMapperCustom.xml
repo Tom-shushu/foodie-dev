@@ -26,6 +26,7 @@
        f.`name` AS `name`,
        f.type AS `type`,
        f.father_id AS fatherId,
+       c.id AS subId,
        c.name AS subName,
        c.type AS subType,
        c.father_id AS subFatherId

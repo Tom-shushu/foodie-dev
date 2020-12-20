@@ -7,11 +7,15 @@ com\zhouhong\pojo\bo\UserBO.class
 com\zhouhong\pojo\ItemsImg.class
 com\zhouhong\pojo\ItemsParam.class
 com\zhouhong\pojo\Items.class
+com\zhouhong\pojo\vo\CommentLevelCountsVO.class
 com\zhouhong\pojo\vo\NewItemsVO.class
 com\zhouhong\pojo\UserAddress.class
 com\zhouhong\pojo\ItemsComments.class
 com\zhouhong\pojo\ItemsSpec.class
 com\zhouhong\pojo\OrderStatus.class
+com\zhouhong\pojo\vo\ItemCommentVO.class
 com\zhouhong\pojo\vo\SubCategoryVO.class
+com\zhouhong\pojo\vo\SearchItemsVO.class
+com\zhouhong\pojo\vo\ItemInfoVO.class
 com\zhouhong\pojo\vo\CategoryVO.class
 com\zhouhong\pojo\vo\SimpleItemVO.class

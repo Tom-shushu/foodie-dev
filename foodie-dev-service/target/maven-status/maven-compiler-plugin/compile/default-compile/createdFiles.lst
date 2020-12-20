@@ -1,4 +1,6 @@
 com\zhouhong\service\CarouselService.class
+com\zhouhong\service\ItemService.class
 com\zhouhong\service\impl\CarouselServiceImpl.class
 com\zhouhong\service\CategoryService.class
+com\zhouhong\service\impl\ItemServiceImpl.class
 com\zhouhong\service\impl\CategoryServiceImpl.class

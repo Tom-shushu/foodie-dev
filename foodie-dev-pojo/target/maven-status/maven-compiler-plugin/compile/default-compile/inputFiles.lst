@@ -3,6 +3,8 @@ E:\work_space\IDEA_work_space\foodie-dev\foodie-dev-pojo\src\main\java\com\zhouh
 E:\work_space\IDEA_work_space\foodie-dev\foodie-dev-pojo\src\main\java\com\zhouhong\pojo\OrderStatus.java
 E:\work_space\IDEA_work_space\foodie-dev\foodie-dev-pojo\src\main\java\com\zhouhong\pojo\vo\NewItemsVO.java
 E:\work_space\IDEA_work_space\foodie-dev\foodie-dev-pojo\src\main\java\com\zhouhong\pojo\UserAddress.java
+E:\work_space\IDEA_work_space\foodie-dev\foodie-dev-pojo\src\main\java\com\zhouhong\pojo\vo\ItemInfoVO.java
+E:\work_space\IDEA_work_space\foodie-dev\foodie-dev-pojo\src\main\java\com\zhouhong\pojo\vo\ItemCommentVO.java
 E:\work_space\IDEA_work_space\foodie-dev\foodie-dev-pojo\src\main\java\com\zhouhong\pojo\bo\UserBO.java
 E:\work_space\IDEA_work_space\foodie-dev\foodie-dev-pojo\src\main\java\com\zhouhong\pojo\Category.java
 E:\work_space\IDEA_work_space\foodie-dev\foodie-dev-pojo\src\main\java\com\zhouhong\pojo\Users.java
@@ -10,7 +12,9 @@ E:\work_space\IDEA_work_space\foodie-dev\foodie-dev-pojo\src\main\java\com\zhouh
 E:\work_space\IDEA_work_space\foodie-dev\foodie-dev-pojo\src\main\java\com\zhouhong\pojo\ItemsComments.java
 E:\work_space\IDEA_work_space\foodie-dev\foodie-dev-pojo\src\main\java\com\zhouhong\pojo\ItemsSpec.java
 E:\work_space\IDEA_work_space\foodie-dev\foodie-dev-pojo\src\main\java\com\zhouhong\pojo\vo\CategoryVO.java
+E:\work_space\IDEA_work_space\foodie-dev\foodie-dev-pojo\src\main\java\com\zhouhong\pojo\vo\SearchItemsVO.java
 E:\work_space\IDEA_work_space\foodie-dev\foodie-dev-pojo\src\main\java\com\zhouhong\pojo\ItemsParam.java
+E:\work_space\IDEA_work_space\foodie-dev\foodie-dev-pojo\src\main\java\com\zhouhong\pojo\vo\CommentLevelCountsVO.java
 E:\work_space\IDEA_work_space\foodie-dev\foodie-dev-pojo\src\main\java\com\zhouhong\pojo\vo\SimpleItemVO.java
 E:\work_space\IDEA_work_space\foodie-dev\foodie-dev-pojo\src\main\java\com\zhouhong\pojo\ItemsImg.java
 E:\work_space\IDEA_work_space\foodie-dev\foodie-dev-pojo\src\main\java\com\zhouhong\pojo\Carousel.java

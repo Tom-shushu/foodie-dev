@@ -2,7 +2,7 @@ package com.zhouhong.pojo.vo;
 
 /**
  * @ClassName: CategoryVO
- * @Description:数据库到页面展示页面的数据
+ * @Description:数据库到页面展示页面的数据,分类
  * @Author: 周红
  * @NickName: Tom-shuhu
  * @Date: Created in 2020/12/17

@@ -1,12 +1,16 @@
+com\zhouhong\enums\OrderStatusEnum.class
 org\n3r\idworker\Id.class
 org\n3r\idworker\strategy\DefaultRandomCodeStrategy.class
 org\n3r\idworker\utils\HttpReq.class
 com\zhouhong\utils\DateUtil.class
 org\n3r\idworker\Code.class
+com\zhouhong\enums\PayMethod.class
 org\n3r\idworker\strategy\FileLock.class
 com\zhouhong\utils\CookieUtils.class
+com\zhouhong\enums\CommentLevel.class
 org\n3r\idworker\Test.class
 com\zhouhong\utils\JSONResult.class
+com\zhouhong\utils\PagedGridResult.class
 com\zhouhong\utils\JsonUtils.class
 org\n3r\idworker\Sid$1.class
 org\n3r\idworker\utils\Props.class
@@ -16,6 +20,7 @@ org\n3r\idworker\RandomCodeStrategy.class
 org\n3r\idworker\utils\IPv4Utils.class
 org\n3r\idworker\utils\Props$Silent.class
 com\zhouhong\enums\YesOrNo.class
+com\zhouhong\utils\DesensitizationUtil.class
 org\n3r\idworker\WorkerIdStrategy.class
 org\n3r\idworker\utils\Utils.class
 org\n3r\idworker\DayCode.class
