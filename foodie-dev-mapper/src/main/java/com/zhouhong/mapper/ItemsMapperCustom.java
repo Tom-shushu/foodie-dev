@@ -5,6 +5,7 @@ import com.zhouhong.my.mapper.MyMapper;
 import com.zhouhong.pojo.Items;
 import com.zhouhong.pojo.vo.ItemCommentVO;
 import com.zhouhong.pojo.vo.SearchItemsVO;
+import com.zhouhong.pojo.vo.ShopcartVO;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -17,4 +18,6 @@ public interface ItemsMapperCustom {
     public List<SearchItemsVO> searchItems(@Param("paramsMap")Map<String, Object> map);
 
     public List<SearchItemsVO> searchItemsByThirdCat(@Param("paramsMap")Map<String, Object> map);
+
+    public List<ShopcartVO> queryItemsBySpecIds(@Param("paramsList")List specIdList);
 }

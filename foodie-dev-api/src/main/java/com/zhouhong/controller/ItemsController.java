@@ -7,6 +7,7 @@ import com.zhouhong.pojo.ItemsSpec;
 import com.zhouhong.pojo.vo.CategoryVO;
 import com.zhouhong.pojo.vo.CommentLevelCountsVO;
 import com.zhouhong.pojo.vo.ItemInfoVO;
+import com.zhouhong.pojo.vo.ShopcartVO;
 import com.zhouhong.service.ItemService;
 import com.zhouhong.utils.JSONResult;
 import com.zhouhong.utils.PagedGridResult;
@@ -139,4 +140,23 @@ public class ItemsController extends BaseController {
         PagedGridResult  grid = itemService.searchItemsByThirdCat(catId, sort, page, pageSize);
         return JSONResult.ok(grid);
     }
+
+    /**
+     * 用于用户长时间未登录网站，刷新购物车中的数据，主要是价格，类似于淘宝
+     * @param itemSpecIds
+     * @return
+     */
+    @ApiOperation(value = "根据商品规格ids查询最新的商品数据",notes = "根据商品规格ids查询最新的商品数据",httpMethod = "GET")
+    @GetMapping("/refresh")
+    public JSONResult refresh(
+            @ApiParam(name = "itemSpecIds", value = "拼接的规格ids", required = true, example = "1001,1003,1005")
+            @RequestParam String itemSpecIds){
+        if (StringUtils.isBlank(itemSpecIds)){
+            return JSONResult.ok();
+        }
+        List<ShopcartVO> list = itemService.queryItemsBySpecIds(itemSpecIds);
+        return JSONResult.ok(list);
+    }
+
+
 }

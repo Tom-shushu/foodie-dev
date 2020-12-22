@@ -1,6 +1,7 @@
 com\zhouhong\pojo\OrderItems.class
 com\zhouhong\pojo\Carousel.class
 com\zhouhong\pojo\Users.class
+com\zhouhong\pojo\vo\ShopcartVO.class
 com\zhouhong\pojo\Category.class
 com\zhouhong\pojo\Orders.class
 com\zhouhong\pojo\bo\UserBO.class
@@ -16,6 +17,7 @@ com\zhouhong\pojo\OrderStatus.class
 com\zhouhong\pojo\vo\ItemCommentVO.class
 com\zhouhong\pojo\vo\SubCategoryVO.class
 com\zhouhong\pojo\vo\SearchItemsVO.class
+com\zhouhong\pojo\bo\ShopcartBO.class
 com\zhouhong\pojo\vo\ItemInfoVO.class
 com\zhouhong\pojo\vo\CategoryVO.class
 com\zhouhong\pojo\vo\SimpleItemVO.class

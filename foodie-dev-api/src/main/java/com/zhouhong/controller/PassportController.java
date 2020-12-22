@@ -91,6 +91,9 @@ public class PassportController {
         usersResult = setNullProperty(usersResult);
         CookieUtils.setCookie(request , response , "user" ,
                 JsonUtils.objectToJson(usersResult) , true);
+        // TODO 生成用户token，存入redis会话
+        // TODO 同步购物车数据
+
         return JSONResult.ok();
     }
 
@@ -120,6 +123,10 @@ public class PassportController {
         usersResult = setNullProperty(usersResult);
         CookieUtils.setCookie(request , response , "user" ,
                 JsonUtils.objectToJson(usersResult) , true);
+
+        // TODO 生成用户token，存入redis会话
+        // TODO 同步购物车数据
+
         return JSONResult.ok(usersResult);
     }
     private Users setNullProperty(Users usersResult){
